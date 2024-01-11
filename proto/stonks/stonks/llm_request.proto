@@ -1,0 +1,12 @@
+syntax = "proto3";
+package stonks.stonks;
+
+option go_package = "github.com/kgrofelnik/stonks/x/stonks/types";
+
+message LlmRequest {
+  
+  string question = 1; 
+  string answer = 2; 
+  string creator = 3; 
+  uint64 id = 4; 
+}
