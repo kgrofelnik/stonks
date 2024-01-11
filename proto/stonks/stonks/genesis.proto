@@ -1,0 +1,17 @@
+syntax = "proto3";
+package stonks.stonks;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+import "stonks/stonks/params.proto";
+
+option go_package = "github.com/kgrofelnik/stonks/x/stonks/types";
+
+// GenesisState defines the stonks module's genesis state.
+message GenesisState {
+  // params defines all the parameters of the module.
+  Params params = 1 [
+    (gogoproto.nullable) = false,
+    (amino.dont_omitempty) = true
+  ];
+}
